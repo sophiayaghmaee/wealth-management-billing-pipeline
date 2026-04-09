@@ -1,0 +1,8 @@
+-- Create tickers table
+CREATE TABLE IF NOT EXISTS silver.tickers (
+    ticker_id INT GENERATED ALWAYS AS IDENTITY (START WITH 1) PRIMARY KEY,
+    ticker TEXT NOT NULL,
+    date_inserted TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    date_updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (ticker) -- UNIQUE constraint
+);
